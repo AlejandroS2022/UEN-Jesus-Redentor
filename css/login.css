@@ -1,0 +1,159 @@
+
+/*= Estilo General
+--------------------------------------------------------*/
+body
+{
+    background-color: #c2f9e7;
+	 font-family: 'Open Sans', sans-serif;
+}
+a {
+    color: #f58220;
+    font-weight: 400;
+}
+
+		nav.navegacion{padding:2px,2px;
+					min-width:100px;}
+					
+		li.navegacion{display:inline-block;}
+		
+		a.navegacion{padding:10px;
+				color:#FFFFFF;
+				font-size:18px;
+				font-family:arial;
+				text-decoration:none;
+				display:block;}
+				
+		ul.navegacion{background: rgba(200,100,0,0.7);
+			box-shadow:0 0 25px rgba(0,0,0,0.1),
+			inset 0 0 1px rgba(255,255,255,0.6);}
+			
+span {
+    font-weight: 300;
+    color: #f58220;
+}
+@media screen and (min-width: 800px) { 
+	.mlogin{
+		margin: 5em auto 0;
+	}
+        .container {
+    padding: 20px 16px 20px 10px;
+    font-weight: 200;
+    overflow: hidden;
+    width: 440px;
+    height: auto;
+    background: #fff;
+
+    box-shadow: 0px 3px 7px #6B6B6B;
+}
+.mregister {
+    margin: 80px auto 0;
+} 
+
+#login {
+    width: 300px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+
+#banner {
+    width: 400px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.container h1 {
+    color: #777;
+    text-align: center;
+    font-weight: 300;
+    border: 1px dashed #777;
+    margin-top: 13px;
+    padding: 15px 15px 15px 15px;
+}
+}
+
+@media screen and (max-width: 800px) { 
+    .mlogin{
+		margin: 10px auto 0;
+	}    
+    
+    .container {
+ padding: 1px 10px 10px 10px;
+    background: #fff;
+
+    box-shadow: 0px 3px 7px #6B6B6B;
+    margin: 5em auto auto auto;
+}
+}
+
+
+
+.error {
+    margin: 40px auto 0;
+    box-shadow: 0px 3px 7px #6B6B6B;
+    padding: 3px;
+    color: #fff;
+    text-align: center;
+    width: 650px;
+    background: red;
+}
+
+.regtext {
+    font-size: 13px;
+    margin-top: 26px;
+    color: #777;
+}
+
+/*= contenedores
+--------------------------------------------------------*/
+
+
+.container h1 {
+    color: #777;
+    text-align: center;
+    font-weight: 300;
+    border: 1px dashed #777;
+    margin-top: 13px;
+    padding: 15px 15px 15px 15px;
+}
+
+.container label {
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+
+/*= botones
+--------------------------------------------------------*/
+
+.button{
+
+
+	border: solid 0.5px #da7c0c;
+	background: #f78d1d;
+	color: #fff;
+	padding: 7px 12px;
+	border-radius:2px;
+	
+	cursor: pointer;
+        box-shadow: 0px 3px 7px #6B6B6B;
+}
+.button input {
+    
+    width:120px;
+}
+.button:hover{
+background: #F47C20;
+	
+}
+
+/*= Footer
+--------------------------------------------------------*/
+footer {
+    color: #6B6B6B;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
