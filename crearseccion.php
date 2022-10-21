@@ -51,6 +51,13 @@ if(!isset($_SESSION["session_username"])) {
 
             </center>
                  </form>
+            </br>
+
+            <center>
+              <button class="btn waves-effect waves-light white darken-3" type="button" id="boton-form" name="Volver" value="Volver" style="color:black">
+                <a href="secciones.php">Volver</a>
+              </button>
+            </center>
          </div>
 	<br/>
         

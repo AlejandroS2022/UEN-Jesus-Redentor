@@ -17,8 +17,10 @@ if(!isset($_SESSION["session_username"])) {
 <?php include("incluye/lateral.php"); ?>
 
       <div class="col s12 m9 l9" id="contenedor3">
-        <h2>Bienvenido, <span><?php echo $_SESSION['session_username'];?>! </span></h2>
-
+        <center>
+          <h2>Bienvenido, <span><?php echo $_SESSION['session_username'];?>! </span></h2>
+          <img height="275px" width="275px" src="incluye/logo.jpg"/>
+        </center>
     </div>
 <?php include("incluye/footer.php"); ?>
 	
