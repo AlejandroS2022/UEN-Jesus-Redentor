@@ -16,6 +16,12 @@
         <a href="materias_est.php" class="collection-item "><span style="color:#50c0dc;"><i class="material-icons left">task</i>Materias del estudiante</span></a>
     <?php } ?>
     <?php if($_SESSION['session_nivel'] == 3) {
+        echo '<a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="collection-item "><span style="color:#50c0dc;"><i class="material-icons left">co_present</i>Datos del estudiante</span></a>';
+    } ?>
+    <?php if($_SESSION['session_nivel'] == 3) {
+        echo '<a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="collection-item "><span style="color:#50c0dc;"><i class="material-icons left">feed</i>Carta de buena conducta</span></a>';
+    } ?>
+    <?php if($_SESSION['session_nivel'] == 3) {
         echo '<a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="collection-item "><span style="color:#50c0dc;"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</span></a>';
     } ?>
  </div>

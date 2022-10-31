@@ -1,57 +1,75 @@
--- phpMyAdmin SQL Dump
--- version 3.5.1
--- http://www.phpmyadmin.net
+-- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
 --
--- Servidor: localhost
--- Tiempo de generación: 29-11-2021 a las 01:47:54
--- Versión del servidor: 5.5.24-log
--- Versión de PHP: 5.4.3
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: bd_escuela
+-- ------------------------------------------------------
+-- Server version	10.4.24-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Base de datos: `bd_escuela`
+-- Table structure for table `alergias`
 --
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `alergias`
---
-
-CREATE TABLE IF NOT EXISTS `alergias` (
+DROP TABLE IF EXISTS `alergias`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `alergias` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(200) NOT NULL,
   `id_estudiante` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `estado_inscripcion`
+-- Dumping data for table `alergias`
 --
 
-CREATE TABLE IF NOT EXISTS `estado_inscripcion` (
+LOCK TABLES `alergias` WRITE;
+/*!40000 ALTER TABLE `alergias` DISABLE KEYS */;
+/*!40000 ALTER TABLE `alergias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `estado_inscripcion`
+--
+
+DROP TABLE IF EXISTS `estado_inscripcion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estado_inscripcion` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `descripcion` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `estudiantes`
+-- Dumping data for table `estado_inscripcion`
 --
 
-CREATE TABLE IF NOT EXISTS `estudiantes` (
+LOCK TABLES `estado_inscripcion` WRITE;
+/*!40000 ALTER TABLE `estado_inscripcion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `estado_inscripcion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `estudiantes`
+--
+
+DROP TABLE IF EXISTS `estudiantes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estudiantes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(100) NOT NULL,
@@ -65,116 +83,128 @@ CREATE TABLE IF NOT EXISTS `estudiantes` (
   `id_seccion` int(10) NOT NULL,
   `eliminado` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `estudiantes`
+-- Dumping data for table `estudiantes`
 --
 
-INSERT INTO `estudiantes` (`id`, `nombre`, `apellido`, `cedula`, `fecha_nacimiento`, `sexo`, `direccion`, `grupo_sanguineo`, `id_representante`, `parentesco_representante`, `id_seccion`, `eliminado`) VALUES
-(1, 'Omar Jose', 'Gomez Sanchez', '34157953', '2014-08-19', 'Masculino', 'El Poblado', 'O+', 1, 'Madre', 4, 0),
-(2, 'Roxana Gabriela', 'Gonzalez Nieto', '35153759', '2015-02-07', 'Femenino', 'El Poblado', 'O+', 2, 'Madre', 2, 0);
-
--- --------------------------------------------------------
+LOCK TABLES `estudiantes` WRITE;
+/*!40000 ALTER TABLE `estudiantes` DISABLE KEYS */;
+INSERT INTO `estudiantes` VALUES (1,'Omar Jose','Gomez Sanchez','34157953','2014-08-19','Masculino','El Poblado','O+',1,'Madre',4,0),(2,'Roxana Gabriela','Gonzalez Nieto','35153759','2015-02-07','Femenino','El Poblado','O+',2,'Madre',2,0),(3,'Jose','Perez','34975521','2016-10-01','Masculino','Centro','AB+',3,'Madre',4,0);
+/*!40000 ALTER TABLE `estudiantes` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `grados`
+-- Table structure for table `grados`
 --
 
-CREATE TABLE IF NOT EXISTS `grados` (
+DROP TABLE IF EXISTS `grados`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `grados` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(15) NOT NULL,
   `descripcion` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `grados`
+-- Dumping data for table `grados`
 --
 
-INSERT INTO `grados` (`id`, `nombre`, `descripcion`) VALUES
-(1, '1', 'Grado'),
-(2, '2', 'Grado'),
-(3, '3', 'Grado'),
-(4, '4', 'Grado'),
-(5, '5', 'Grado'),
-(6, '6', 'Grado'),
-(7, '1', 'Año'),
-(8, '2', 'Año'),
-(9, '3', 'Año'),
-(10, '4', 'Año'),
-(11, '5', 'Año');
-
--- --------------------------------------------------------
+LOCK TABLES `grados` WRITE;
+/*!40000 ALTER TABLE `grados` DISABLE KEYS */;
+INSERT INTO `grados` VALUES (1,'1','Grado'),(2,'2','Grado'),(3,'3','Grado'),(4,'4','Grado'),(5,'5','Grado'),(6,'6','Grado'),(7,'1','Año'),(8,'2','Año'),(9,'3','Año'),(10,'4','Año'),(11,'5','Año');
+/*!40000 ALTER TABLE `grados` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `inscripcion_estudiantes`
+-- Table structure for table `inscripcion_estudiantes`
 --
 
-CREATE TABLE IF NOT EXISTS `inscripcion_estudiantes` (
+DROP TABLE IF EXISTS `inscripcion_estudiantes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `inscripcion_estudiantes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `id_estudiante` int(10) NOT NULL,
   `id_estado` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Estructura de tabla para la tabla `materia`
+-- Dumping data for table `inscripcion_estudiantes`
 --
 
-CREATE TABLE IF NOT EXISTS `materia` (
+LOCK TABLES `inscripcion_estudiantes` WRITE;
+/*!40000 ALTER TABLE `inscripcion_estudiantes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `inscripcion_estudiantes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `materia`
+--
+
+DROP TABLE IF EXISTS `materia`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `materia` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `id_grado` int(10) NOT NULL,
   `eliminado` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `materia`
+-- Dumping data for table `materia`
 --
 
-INSERT INTO `materia` (`id`, `nombre`, `id_grado`, `eliminado`) VALUES
-(1, 'Matemáticas', 1, 0),
-(2, 'Ciencias Naturales', 1, 0),
-(3, 'Lenguaje y Literatura', 1, 0),
-(4, 'Lenguaje y Literatura', 2, 0),
-(5, 'Matemáticas', 2, 0),
-(6, 'Educación Física', 2, 0),
-(7, 'Ciencias Sociales', 2, 0),
-(8, 'Historia', 7, 0);
-
--- --------------------------------------------------------
+LOCK TABLES `materia` WRITE;
+/*!40000 ALTER TABLE `materia` DISABLE KEYS */;
+INSERT INTO `materia` VALUES (1,'Matemáticas',1,0),(2,'Ciencias Naturales',1,0),(3,'Lenguaje y Literatura',1,0),(4,'Lenguaje y Literatura',2,0),(5,'Matemáticas',2,0),(6,'Educación Física',2,0),(7,'Ciencias Sociales',2,0),(8,'Historia',7,0);
+/*!40000 ALTER TABLE `materia` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `materia_profesor`
+-- Table structure for table `materia_profesor`
 --
 
-CREATE TABLE IF NOT EXISTS `materia_profesor` (
+DROP TABLE IF EXISTS `materia_profesor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `materia_profesor` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `id_profesor` int(10) NOT NULL,
   `id_materia` int(10) NOT NULL,
   `id_seccion` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `materia_profesor`
+-- Dumping data for table `materia_profesor`
 --
 
-INSERT INTO `materia_profesor` (`id`, `id_profesor`, `id_materia`, `id_seccion`) VALUES
-(1, 2, 3, 1),
-(3, 2, 3, 2);
-
--- --------------------------------------------------------
+LOCK TABLES `materia_profesor` WRITE;
+/*!40000 ALTER TABLE `materia_profesor` DISABLE KEYS */;
+INSERT INTO `materia_profesor` VALUES (1,2,3,1),(3,2,3,2);
+/*!40000 ALTER TABLE `materia_profesor` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `profesores`
+-- Table structure for table `profesores`
 --
 
-CREATE TABLE IF NOT EXISTS `profesores` (
+DROP TABLE IF EXISTS `profesores`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `profesores` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(100) NOT NULL,
@@ -186,23 +216,27 @@ CREATE TABLE IF NOT EXISTS `profesores` (
   `direccion` varchar(200) NOT NULL,
   `eliminado` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `profesores`
+-- Dumping data for table `profesores`
 --
 
-INSERT INTO `profesores` (`id`, `nombre`, `apellido`, `cedula`, `fecha_nacimiento`, `sexo`, `telefono`, `otro_telefono`, `direccion`, `eliminado`) VALUES
-(1, 'Laura Angelina', 'Diaz Quintero', '16789456', '1992-10-18', 'Femenino', '04267894561', '04245546465', 'El Poblado', 0),
-(2, 'Nestor Jesus', 'Torres Ramirez', '18258369', '1994-10-10', 'Masculino', '04167894562', '', 'El Poblado', 0);
-
--- --------------------------------------------------------
+LOCK TABLES `profesores` WRITE;
+/*!40000 ALTER TABLE `profesores` DISABLE KEYS */;
+INSERT INTO `profesores` VALUES (1,'Laura Angelina','Diaz Quintero','16789456','1992-10-18','Femenino','04267894561','04245546465','El Poblado',0),(2,'Nestor Jesus','Torres Ramirez','18258369','1994-10-10','Masculino','04167894562','','El Poblado',0);
+/*!40000 ALTER TABLE `profesores` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `representantes`
+-- Table structure for table `representantes`
 --
 
-CREATE TABLE IF NOT EXISTS `representantes` (
+DROP TABLE IF EXISTS `representantes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `representantes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(100) NOT NULL,
@@ -213,80 +247,104 @@ CREATE TABLE IF NOT EXISTS `representantes` (
   `otro_telefono` varchar(15) NOT NULL,
   `direccion` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `representantes`
+-- Dumping data for table `representantes`
 --
 
-INSERT INTO `representantes` (`id`, `nombre`, `apellido`, `cedula`, `fecha_nacimiento`, `sexo`, `telefono`, `otro_telefono`, `direccion`) VALUES
-(1, 'Ana Maria', 'Sanchez Espinoza', '26456123', '1998-03-11', 'Femenino', '04142345678', '', 'El Poblado'),
-(2, 'Genesis Gabriela', 'Nieto Ortiz', '19123456', '1993-06-24', 'Femenino', '04147894561', '', 'El Poblado');
-
--- --------------------------------------------------------
+LOCK TABLES `representantes` WRITE;
+/*!40000 ALTER TABLE `representantes` DISABLE KEYS */;
+INSERT INTO `representantes` VALUES (1,'Ana Maria','Sanchez Espinoza','26456123','1998-03-11','Femenino','04142345678','','El Poblado'),(2,'Genesis Gabriela','Nieto Ortiz','19123456','1993-06-24','Femenino','04147894561','','El Poblado'),(3,'Maria','Medina','12345678','1995-09-30','Femenino','04141234567','','Centro');
+/*!40000 ALTER TABLE `representantes` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `secciones`
+-- Table structure for table `secciones`
 --
 
-CREATE TABLE IF NOT EXISTS `secciones` (
+DROP TABLE IF EXISTS `secciones`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `secciones` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(15) NOT NULL,
   `id_grado` int(10) NOT NULL,
   `eliminado` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `secciones`
+-- Dumping data for table `secciones`
 --
 
-INSERT INTO `secciones` (`id`, `nombre`, `id_grado`, `eliminado`) VALUES
-(1, 'A', 1, 0),
-(2, 'B', 1, 0),
-(3, 'A', 2, 0),
-(4, 'B', 2, 0),
-(5, 'C', 1, 0),
-(6, 'A', 3, 1);
-
--- --------------------------------------------------------
+LOCK TABLES `secciones` WRITE;
+/*!40000 ALTER TABLE `secciones` DISABLE KEYS */;
+INSERT INTO `secciones` VALUES (1,'A',1,0),(2,'B',1,0),(3,'A',2,0),(4,'B',2,0),(5,'C',1,0),(6,'A',3,1);
+/*!40000 ALTER TABLE `secciones` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuario_estudiante`
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
+DROP TABLE IF EXISTS `usuario_estudiante`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuario_estudiante` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(10) NOT NULL,
+  `id_estudiante` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuario_estudiante`
+--
+
+LOCK TABLES `usuario_estudiante` WRITE;
+/*!40000 ALTER TABLE `usuario_estudiante` DISABLE KEYS */;
+INSERT INTO `usuario_estudiante` VALUES (1,4,1),(2,5,2),(3,6,3);
+/*!40000 ALTER TABLE `usuario_estudiante` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuarios` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(50) NOT NULL,
   `clave` varchar(50) NOT NULL,
   `nivel` int(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `nivel`) VALUES
-(1, 'administrador', '123', 1),
-(3, 'asistente', '123', 2),
-(4, 'v34157953', 'v34157953', 3),
-(5, 'v35153759', 'v35153759', 3);
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'administrador','123',1),(3,'asistente','123',2),(4,'v34157953','v34157953',3),(5,'v35153759','v35153759',3),(6,'v34975521','v34975521',3);
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario_estudiante`
---
-
-CREATE TABLE IF NOT EXISTS `usuario_estudiante` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `id_usuario` int(10) NOT NULL,
-  `id_estudiante` int(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-10-30 20:14:32

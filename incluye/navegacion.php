@@ -46,6 +46,10 @@
     <li class="divider" tabindex="-1"></li>
     <li><a href="materias_est.php" class="cyan-text darken-1"><i class="material-icons left">task</i>Materias del estudiante</a></li>
     <li class="divider" tabindex="-1"></li>
+    <?php echo '<li><a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">co_present</i>Datos del estudiante</a></li>'; ?>
+    <li class="divider" tabindex="-1"></li>
+    <?php echo '<li><a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">feed</i>Carta de buena conducta</a></li>'; ?>
+    <li class="divider" tabindex="-1"></li>
     <?php echo '<li><a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</a></li>'; ?>
   <?php } ?>
   </ul>
@@ -88,6 +92,10 @@
   <?php if($_SESSION['session_nivel'] == 3) { ?>
     <li class="divider" tabindex="-1"></li>
     <li><a href="materias_est.php" class="cyan-text darken-1"><i class="material-icons left">task</i>Materias del estudiante</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <?php echo '<li><a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">co_present</i>Datos del estudiante</a></li>'; ?>
+    <li class="divider" tabindex="-1"></li>
+    <?php echo '<li><a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">feed</i>Carta de buena conducta</a></li>'; ?>
     <li class="divider" tabindex="-1"></li>
     <?php echo '<li><a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</a></li>'; ?>
   <?php } ?>
