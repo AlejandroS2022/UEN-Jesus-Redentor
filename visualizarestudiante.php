@@ -163,6 +163,33 @@ if(!isset($_SESSION["session_username"])) {
             </br>
 
             <center>
+              <button class="btn waves-effect waves-light red darken-3" type="button" id="boton-form" name="Datos" value="Datos">
+                <?php
+                  echo '<a href="datos_alumno.php?cedula=v'.$filas['cedula'].'" target="_blank" style="color:white">Datos del estudiante <i class="material-icons left">description</i></a>';
+                ?>
+              </button>
+            </center>
+            </br>
+
+            <center>
+              <button class="btn waves-effect waves-light red darken-3" type="button" id="boton-form" name="Conducta" value="Conducta">
+                <?php
+                  echo '<a href="carta_conducta.php?cedula=v'.$filas['cedula'].'" target="_blank" style="color:white">Carta de buena conducta <i class="material-icons left">description</i></a>';
+                ?>
+              </button>
+            </center>
+            </br>
+
+            <center>
+              <button class="btn waves-effect waves-light red darken-3" type="button" id="boton-form" name="Conducta" value="Conducta">
+                <?php
+                  echo '<a href="carnet.php?cedula=v'.$filas['cedula'].'" target="_blank" style="color:white">Carnet estudiantil <i class="material-icons left">description</i></a>';
+                ?>
+              </button>
+            </center>
+            </br>
+
+            <center>
               <button class="btn waves-effect waves-light white darken-3" type="button" id="boton-form" name="Volver" value="Volver" style="color:black">
                 <a href="estudiantes.php">Volver</a>
               </button>
