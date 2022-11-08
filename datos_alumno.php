@@ -12,125 +12,127 @@
 	$pdf->AddPage();
 	$pdf->SetFillColor(232,232,232);
 
-    $pdf->SetY(25);
+    $pdf->Image('incluye/membrete.png',15,5,180,32);
+
+    $pdf->SetY(40);
 	$pdf->SetX(75);
     $pdf->SetFont('Arial','B',16);
 	$pdf->Cell(40,6,utf8_decode("DATOS DEL ALUMNO"),0,0,'L',0);
 
-    $pdf->SetY(36);
+    $pdf->SetY(51);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Nombres y Apellidos:"),0,0,'L',0);
-    $pdf->SetY(36);
+    $pdf->SetY(51);
 	$pdf->SetX(66);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['apellido']." ".$filas['nombre']),0,0,'L',0);
 
-    $pdf->SetY(44);
+    $pdf->SetY(59);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Cédula de identidad:"),0,0,'L',0);
-    $pdf->SetY(44);
+    $pdf->SetY(59);
 	$pdf->SetX(65);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode("V-".$filas['cedula']),0,0,'L',0);
 
-    $pdf->SetY(52);
+    $pdf->SetY(67);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Fecha de nacimiento:"),0,0,'L',0);
-    $pdf->SetY(52);
+    $pdf->SetY(67);
 	$pdf->SetX(66);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($fecha_nacimiento),0,0,'L',0);
 
-    $pdf->SetY(60);
+    $pdf->SetY(75);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Dirección:"),0,0,'L',0);
-    $pdf->SetY(60);
+    $pdf->SetY(75);
 	$pdf->SetX(46);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['direccion']),0,0,'L',0);
 
-    $pdf->SetY(68);
+    $pdf->SetY(83);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Sexo:"),0,0,'L',0);
-    $pdf->SetY(68);
+    $pdf->SetY(83);
 	$pdf->SetX(37);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['sexo']),0,0,'L',0);
 
-    $pdf->SetY(76);
+    $pdf->SetY(91);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Grupo Sanguíneo:"),0,0,'L',0);
-    $pdf->SetY(76);
+    $pdf->SetY(91);
 	$pdf->SetX(60);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['grupo_sanguineo']),0,0,'L',0);
 
-    $pdf->SetY(84);
+    $pdf->SetY(99);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Grado a cursar:"),0,0,'L',0);
-    $pdf->SetY(84);
+    $pdf->SetY(99);
 	$pdf->SetX(56);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['g_nombre']."° ".$filas['g_descripcion'].' Sección "'.$filas["s_nombre"].'"'),0,0,'L',0);
 
-    $pdf->SetY(102);
+    $pdf->SetY(117);
 	$pdf->SetX(65);
     $pdf->SetFont('Arial','B',16);
 	$pdf->Cell(40,6,utf8_decode("DATOS DEL REPRESENTANTE"),0,0,'L',0);
 
-    $pdf->SetY(113);
+    $pdf->SetY(128);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Nombres y Apellidos:"),0,0,'L',0);
-    $pdf->SetY(113);
+    $pdf->SetY(128);
 	$pdf->SetX(66);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['apellido_r']." ".$filas['nombre_r']),0,0,'L',0);
 
-    $pdf->SetY(121);
+    $pdf->SetY(136);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Cédula de identidad:"),0,0,'L',0);
-    $pdf->SetY(121);
+    $pdf->SetY(136);
 	$pdf->SetX(65);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode("V-".$filas['cedula_r']),0,0,'L',0);
 
-    $pdf->SetY(129);
+    $pdf->SetY(144);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Parentesco con el estudiante:"),0,0,'L',0);
-    $pdf->SetY(129);
+    $pdf->SetY(144);
 	$pdf->SetX(82);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['parentesco_representante']),0,0,'L',0);
 
-    $pdf->SetY(137);
+    $pdf->SetY(152);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Teléfono de contacto:"),0,0,'L',0);
-    $pdf->SetY(137);
+    $pdf->SetY(152);
 	$pdf->SetX(67);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['telefono']),0,0,'L',0);
 
-    $pdf->SetY(145);
+    $pdf->SetY(160);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->Cell(40,6,utf8_decode("Otro número telefónico:"),0,0,'L',0);
-    $pdf->SetY(145);
+    $pdf->SetY(160);
 	$pdf->SetX(71);
     $pdf->SetFont('Arial','U',11);
 	$pdf->Cell(40,6,utf8_decode($filas['otro_telefono']),0,0,'L',0);
 
-    $pdf->SetY(190);
+    $pdf->SetY(205);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',13);
 	$pdf->Cell(40,6,utf8_decode("Firma: __________________________________________"),0,0,'L',0);

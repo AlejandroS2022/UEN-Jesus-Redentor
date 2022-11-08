@@ -13,23 +13,25 @@
 	$pdf->AddPage();
 	$pdf->SetFillColor(232,232,232);
 
-    $pdf->SetY(25);
+    $pdf->Image('incluye/membrete.png',15,5,180,32);
+
+    $pdf->SetY(40);
 	$pdf->SetX(65);
     $pdf->SetFont('Arial','B',16);
 	$pdf->Cell(40,6,utf8_decode("CARTA DE BUENA CONDUCTA"),0,0,'L',0);
 
-    $pdf->SetY(40);
+    $pdf->SetY(55);
 	$pdf->SetX(25);
     $pdf->SetFont('Arial','B',11);
 	$pdf->MultiCell(170,8,utf8_decode('Quien suscribe, director (a) de la Unidad Educativa Nacional "Jesús Redentor" hace constar que el/la estudiante '.$filas['nombre']." ".$filas['apellido'].', titular de la cédula escolar o de identidad V-'.$filas['cedula'].', cursa en este plantel '.$filas['g_nombre'].'° '.$filas['g_descripcion'].', en el año escolar 2022-2023 y durante su permanencia en el mismo se ha observado BUENA CONDUCTA.
     
 Constancia que se expide a petición del interesado en la fecha '.$fecha.'.'),0,'J',0);
 
-    $pdf->SetY(170);
+    $pdf->SetY(185);
 	$pdf->SetX(60);
     $pdf->SetFont('Arial','B',13);
 	$pdf->Cell(40,6,utf8_decode("_____________________________________"),0,0,'L',0);
-    $pdf->SetY(180);
+    $pdf->SetY(195);
 	$pdf->SetX(86);
     $pdf->SetFont('Arial','B',13);
 	$pdf->Cell(40,6,utf8_decode("Firma del director"),0,0,'L',0);

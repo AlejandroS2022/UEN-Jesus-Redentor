@@ -1,5 +1,5 @@
 <nav>
-    <div class="nav-wrapper cyan darken-1">
+    <div class="nav-wrapper" style="background-color: #a1714f;">
       <a href="inicio.php" class="brand-logo">&nbsp;U.E.N. Jesus Redentor</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -30,41 +30,41 @@
   <ul id='dropdown1' class='dropdown-content'>
   <?php if($_SESSION['session_nivel'] != 3) { ?>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="secciones.php" class="cyan-text darken-1"><i class="material-icons left">book</i>Secciones</a></li>
+    <li><a href="secciones.php" style="color: #a1714f;"><i class="material-icons left">book</i>Secciones</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="materias.php" class="cyan-text darken-1"><i class="material-icons left">task</i>Materias</a></li>
+    <li><a href="materias.php" style="color: #a1714f;"><i class="material-icons left">task</i>Materias</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="estudiantes.php" class="cyan-text darken-1"><i class="material-icons left">groups</i>Estudiantes</a></li>
+    <li><a href="estudiantes.php" style="color: #a1714f;"><i class="material-icons left">groups</i>Estudiantes</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="profesores.php" class="cyan-text darken-1"><i class="material-icons left">school</i>Profesores</a></li>
+    <li><a href="profesores.php" style="color: #a1714f;"><i class="material-icons left">school</i>Profesores</a></li>
   <?php } ?>
   <?php if($_SESSION['session_nivel'] == 1) { ?>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="administradores.php" class="cyan-text darken-1"><i class="material-icons left">key</i>Usuarios</a></li>
+    <li><a href="administradores.php" style="color: #a1714f;"><i class="material-icons left">key</i>Usuarios</a></li>
   <?php } ?>
   <?php if($_SESSION['session_nivel'] == 3) { ?>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="materias_est.php" class="cyan-text darken-1"><i class="material-icons left">task</i>Materias del estudiante</a></li>
+    <li><a href="materias_est.php" style="color: #a1714f;"><i class="material-icons left">task</i>Materias del estudiante</a></li>
     <li class="divider" tabindex="-1"></li>
-    <?php echo '<li><a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">co_present</i>Datos del estudiante</a></li>'; ?>
+    <?php echo '<li><a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank" style="color: #a1714f;"><i class="material-icons left">co_present</i>Datos del estudiante</a></li>'; ?>
     <li class="divider" tabindex="-1"></li>
-    <?php echo '<li><a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">feed</i>Carta de buena conducta</a></li>'; ?>
+    <?php echo '<li><a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank" style="color: #a1714f;"><i class="material-icons left">feed</i>Carta de buena conducta</a></li>'; ?>
     <li class="divider" tabindex="-1"></li>
-    <?php echo '<li><a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</a></li>'; ?>
+    <?php echo '<li><a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank" style="color: #a1714f;"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</a></li>'; ?>
   <?php } ?>
   </ul>
 
   <ul id='dropdown2' class='dropdown-content'>
-    <li><a href="crearseccion.php" class="cyan-text darken-1"><i class="material-icons left">add_circle_outline</i>Crear sección</a></li>
+    <li><a href="crearseccion.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Crear sección</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="crearmateria.php" class="cyan-text darken-1"><i class="material-icons left">add_circle_outline</i>Crear materia</a></li>
+    <li><a href="crearmateria.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Crear materia</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="crearestudiante.php" class="cyan-text darken-1"><i class="material-icons left">add_circle_outline</i>Agregar estudiante</a></li>
+    <li><a href="crearestudiante.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Agregar estudiante</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="crearprofesor.php" class="cyan-text darken-1"><i class="material-icons left">add_circle_outline</i>Agregar profesor</a></li>
+    <li><a href="crearprofesor.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Agregar profesor</a></li>
   <?php if($_SESSION['session_nivel'] == 1) { ?>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="crearadministrador.php" class="cyan-text darken-1"><i class="material-icons left">add_circle_outline</i>Crear usuario</a></li>
+    <li><a href="crearadministrador.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Crear usuario</a></li>
   <?php } ?>
   </ul>
 <!--
@@ -91,13 +91,13 @@
   <?php } ?>
   <?php if($_SESSION['session_nivel'] == 3) { ?>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="materias_est.php" class="cyan-text darken-1"><i class="material-icons left">task</i>Materias del estudiante</a></li>
+    <li><a href="materias_est.php"><i class="material-icons left">task</i>Materias del estudiante</a></li>
     <li class="divider" tabindex="-1"></li>
-    <?php echo '<li><a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">co_present</i>Datos del estudiante</a></li>'; ?>
+    <?php echo '<li><a href="datos_alumno.php?cedula='.$_SESSION['session_username'].'" target="_blank"><i class="material-icons left">co_present</i>Datos del estudiante</a></li>'; ?>
     <li class="divider" tabindex="-1"></li>
-    <?php echo '<li><a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">feed</i>Carta de buena conducta</a></li>'; ?>
+    <?php echo '<li><a href="carta_conducta.php?cedula='.$_SESSION['session_username'].'" target="_blank"><i class="material-icons left">feed</i>Carta de buena conducta</a></li>'; ?>
     <li class="divider" tabindex="-1"></li>
-    <?php echo '<li><a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank" class="cyan-text darken-1"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</a></li>'; ?>
+    <?php echo '<li><a href="carnet.php?cedula='.$_SESSION['session_username'].'" target="_blank"><i class="material-icons left">contact_emergency</i>Carnet estudiantil</a></li>'; ?>
   <?php } ?>
   </ul>
 

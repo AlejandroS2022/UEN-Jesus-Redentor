@@ -6,13 +6,15 @@
 	$pdf->AddPage();
 	$pdf->SetFillColor(232,232,232);
 
+	$pdf->Image('incluye/membrete.png',15,5,180,32);
+
 	$pdf->SetFont('Arial','B',22);
-	$pdf->SetY(20);
+	$pdf->SetY(40);
 	$pdf->SetX(65);
 	$pdf->Cell(45,10,'U.E.N Jesus Redentor');
 
 	$pdf->SetFont('Arial','B',12);
-	$pdf->SetY(40);
+	$pdf->SetY(60);
 	$pdf->SetX(20);
 	$pdf->Cell(40,6,utf8_decode('Grado / Año'),1,0,'L',1);
 	$pdf->SetX(60);
@@ -38,7 +40,7 @@
 		}
 		$i=$i+6;
 		$pdf->SetFont('Arial','',10);
-		$pdf->SetY(40+$i);
+		$pdf->SetY(60+$i);
 		$pdf->SetX(20);
 	    $pdf->Cell(40,6,utf8_decode($filas['g_nombre'].'º '.$filas['descripcion']),1,0,'L',0);
 	    $pdf->SetX(60);

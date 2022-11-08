@@ -30,7 +30,7 @@ if(!isset($_SESSION["session_username"])) {
 
       <form method='post' action='crearadministrador.php'><button class="btn waves-effect waves-light orange darken-3" style="float: right;" type='submit'>Agregar</button></form>
       </br>
-         <table> <tr> <th>Nombre de usuario</th> <th>Clave</th> <th>Nivel de usuario</th> <th> </th></tr>
+         <table> <tr> <th>Nombre de usuario</th> <th>Nivel de usuario</th> <th> </th></tr>
 
              <script languaje="JavaScript">
                  function aviso(url,Accion,Nombre,Seccion){
@@ -55,7 +55,6 @@ if(!isset($_SESSION["session_username"])) {
     }
         echo"<tr>";
 	echo "<td>&nbsp;&nbsp;".$resultados['usuario']."&nbsp;&nbsp;</td>";
-	echo "<td>&nbsp;&nbsp;".$resultados['clave']."&nbsp;&nbsp;</td>";
   echo "<td>&nbsp;&nbsp;".$nivel."&nbsp;&nbsp;</td>";
   echo "<td>
 

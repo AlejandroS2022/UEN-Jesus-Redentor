@@ -3,7 +3,7 @@
 --------------------------------------------------------*/
 body
 {
-	background-color: #c2f9e7;
+	background-color: #d7bead;
 	 font-family: 'Open Sans', sans-serif;
 }
 
@@ -226,10 +226,10 @@ th{
     font-size: 13px;
     font-weight: normal;
     padding: 8px;
-    background-color: #50c0dc;
-    border-top: 6px solid #50c0dc;
+    background-color: #a1714f;
+    border-top: 6px solid #a1714f;
     border-bottom: 1px solid #FFF;
-    color: black;
+    color: white;
 }
 
 td{
@@ -295,17 +295,17 @@ footer {
 .grande{ font-size: large;}
 
 .boton-accion {
-    border: 2px solid #2990d1;
+    border: 2px solid #a1714f;
     font-size: 12px;
     font-weight: bold;
-    color: #2990d1;
-    background-color: #dbf6fb;
+    color: #a1714f;
+    background-color: #e4d4c8;
     padding: 5px;
 }
 
 .boton-accion:hover {
-    border: 2px solid #dbf6fb;
-    color: #dbf6fb;
-    background-color: #2990d1;
+    border: 2px solid #e4d4c8;
+    color: #e4d4c8;
+    background-color: #a1714f;
 }
 
