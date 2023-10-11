@@ -28,6 +28,7 @@ if(!isset($_SESSION["session_username"])) {
             <h1>Estudiantes</h1>
         </center>
 
+        <button class="btn waves-effect waves-light white darken-3" style="float: left; color:black" type="button" id="boton-form" name="Volver" value="Volver"><a href="inicio.php">Volver</a></button>
       <form method='post' action='crearestudiante.php'><button class="btn waves-effect waves-light orange darken-3" style="float: right;" type='submit'>Agregar</button></form>
       </br>
          <table> <tr> <th>Cédula</th> <th>Apellidos y Nombres</th> <th> Fecha de nacimiento</th> <th> Sexo</th> <th> Sección</th> <th> </th></tr>

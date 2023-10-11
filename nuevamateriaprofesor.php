@@ -57,7 +57,7 @@ if(!isset($_SESSION["session_username"])) {
                   $result2 = mysqli_query($con, "SELECT m.id as id, m.nombre as m_nombre, g.nombre as g_nombre, g.descripcion as g_descripcion FROM materia m, grados g WHERE g.id=m.id_grado AND m.eliminado=0 ORDER BY g.id, m.nombre ASC");
                   while ($filas2 = mysqli_fetch_array($result2)){
                 ?>
-                    <option <?php echo'value="'.$filas2['id'].'"'; ?> ><?php echo $filas2['m_nombre']." - ".$filas2['g_nombre']."º ".$filas2['g_descripcion']; ?></option>
+                    <option <?php echo'value="'.$filas2['id'].'"'; ?> ><?php echo $filas2['m_nombre']; ?></option>
                 <?php } ?>
                 </select>
                 <label for="id_materia">Materia</label>
@@ -71,7 +71,7 @@ if(!isset($_SESSION["session_username"])) {
                     <option <?php echo'value="'.$filas2['id'].'"'; ?> ><?php echo $filas2['g_nombre']."º ".$filas2['g_descripcion']." ".$filas2['s_nombre']; ?></option>
                 <?php } ?>
                 </select>
-                <label for="id_seccion">Sección</label>
+                <label for="id_seccion">Grado - Sección</label>
                 </div>
             </div>
              <center>
@@ -80,6 +80,14 @@ if(!isset($_SESSION["session_username"])) {
 
             </center>
                  </form>
+
+                 </br>
+                 
+                 <center>
+              <button class="btn waves-effect waves-light white darken-3" type="button" id="boton-form" name="Volver" value="Volver" style="color:black">
+                <a href="profesores.php">Volver</a>
+              </button>
+            </center>
          </div>
 	<br/>
         
