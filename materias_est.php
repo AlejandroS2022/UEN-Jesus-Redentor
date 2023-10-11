@@ -28,6 +28,7 @@ if(!isset($_SESSION["session_username"])) {
             <h1>Materias</h1>
         </center>
 
+        <button class="btn waves-effect waves-light white darken-3" style="float: left; color:black" type="button" id="boton-form" name="Volver" value="Volver"><a href="inicio.php">Volver</a></button>
       </br>
          <table> <tr> <th>Materia</th> <th>Grado / Año</th></tr>
 

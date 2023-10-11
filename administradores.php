@@ -28,6 +28,7 @@ if(!isset($_SESSION["session_username"])) {
             <h1>Usuarios del sistema</h1>
         </center>
 
+      <button class="btn waves-effect waves-light white darken-3" style="float: left; color:black" type="button" id="boton-form" name="Volver" value="Volver"><a href="inicio.php">Volver</a></button>
       <form method='post' action='crearadministrador.php'><button class="btn waves-effect waves-light orange darken-3" style="float: right;" type='submit'>Agregar</button></form>
       </br>
          <table> <tr> <th>Nombre de usuario</th> <th>Nivel de usuario</th> <th> </th></tr>
@@ -56,11 +57,13 @@ if(!isset($_SESSION["session_username"])) {
         echo"<tr>";
 	echo "<td>&nbsp;&nbsp;".$resultados['usuario']."&nbsp;&nbsp;</td>";
   echo "<td>&nbsp;&nbsp;".$nivel."&nbsp;&nbsp;</td>";
-  echo "<td>
-
-  <form method='post' id='".$resultados['id']."' action='eliminaradministrador.php?id=".$resultados['id']."'><button class='boton-accion' type='button' onclick=enviarForm('d',".$resultados['id'].")>Eliminar</button></form></td>";
-	echo "</tr>";}
-	else {echo "<br/>No hay más datos!!! <br/>";}
+  echo "<td>";
+  if ($resultados['usuario'] !== $_SESSION['session_username']) {
+    echo "<form method='post' id='".$resultados['id']."' action='eliminaradministrador.php?id=".$resultados['id']."'><button class='boton-accion' type='button' onclick=enviarForm('d',".$resultados['id'].")>Eliminar</button></form>";
+  }
+  echo "</td>";
+  echo "</tr>";
+  } else {echo "<br/>No hay más datos!!! <br/>";}
 }
 
 
