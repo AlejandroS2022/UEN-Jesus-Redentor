@@ -6,9 +6,6 @@
         <a href="estudiantes.php" class="collection-item "><span style="color:#a1714f;"><i class="material-icons left">groups</i>Ver Estudiantes</span></a>
         <a href="profesores.php" class="collection-item "><span style="color:#a1714f;"><i class="material-icons left">school</i>Ver Profesores</span></a>
     <?php } ?>
-    <?php if($_SESSION['session_nivel'] == 1) { ?>
-        <a href="administradores.php" class="collection-item "><span style="color:#a1714f;"><i class="material-icons left">vpn_key</i>Ver Usuarios</span></a>
-    <?php } ?>
     <?php if($_SESSION['session_nivel'] != 3) { ?>
         <a href="reporte.php" target="_blank" class="collection-item "><span style="color:#a1714f;"><i class="material-icons left">assignment</i>Reporte de estudiantes</span></a>
     <?php } ?>
