@@ -38,10 +38,6 @@
     <li class="divider" tabindex="-1"></li>
     <li><a href="profesores.php" style="color: #a1714f;"><i class="material-icons left">school</i>Profesores</a></li>
   <?php } ?>
-  <?php if($_SESSION['session_nivel'] == 1) { ?>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="administradores.php" style="color: #a1714f;"><i class="material-icons left">key</i>Usuarios</a></li>
-  <?php } ?>
   <?php if($_SESSION['session_nivel'] == 3) { ?>
     <li class="divider" tabindex="-1"></li>
     <li><a href="materias_est.php" style="color: #a1714f;"><i class="material-icons left">task</i>Materias del estudiante</a></li>
@@ -62,10 +58,6 @@
     <li><a href="crearestudiante.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Agregar estudiante</a></li>
     <li class="divider" tabindex="-1"></li>
     <li><a href="crearprofesor.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Agregar profesor</a></li>
-  <?php if($_SESSION['session_nivel'] == 1) { ?>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="crearadministrador.php" style="color: #a1714f;"><i class="material-icons left">add_circle_outline</i>Crear usuario</a></li>
-  <?php } ?>
   </ul>
 <!--
   <ul id='dropdown3' class='dropdown-content'>
@@ -84,10 +76,6 @@
     <li><a href="estudiantes.php"><i class="material-icons left">groups</i>Estudiantes</a></li>
     <li class="divider" tabindex="-1"></li>
     <li><a href="profesores.php"><i class="material-icons left">school</i>Profesores</a></li>
-  <?php } ?>
-  <?php if($_SESSION['session_nivel'] == 1) { ?>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="administradores.php"><i class="material-icons left">key</i>Usuarios</a></li>
   <?php } ?>
   <?php if($_SESSION['session_nivel'] == 3) { ?>
     <li class="divider" tabindex="-1"></li>
@@ -109,10 +97,6 @@
     <li><a href="crearestudiante.php"><i class="material-icons left">add_circle_outline</i>Agregar estudiante</a></li>
     <li class="divider" tabindex="-1"></li>
     <li><a href="crearprofesor.php"><i class="material-icons left">add_circle_outline</i>Agregar profesor</a></li>
-  <?php if($_SESSION['session_nivel'] == 1) { ?>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="crearadministrador.php"><i class="material-icons left">add_circle_outline</i>Crear usuario</a></li>
-  <?php } ?>
   </ul>
 <!--
   <ul id='dropdown6' class='dropdown-content'>
